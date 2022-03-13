@@ -1,0 +1,10 @@
+# This file tracks properties of this Flutter project.
+# Used by Flutter tool to assess capabilities and perform upgrades etc.
+#
+# This file should be version controlled and should not be manually edited.
+
+version:
+  revision: 0332a3377a8ed71a238c420a0df6ea9578584c70
+  channel: cherry-pick-template
+
+project_type: app
