@@ -48,7 +48,7 @@ class _ProductCard extends StatelessWidget {
       child: Column(children: [
         Text(product.tag ?? ""),
         Text(product.title ?? ""),
-        Text(product.date.toString()),
+        Text("Tarih: " + product.date.toString()),
       ]),
     );
   }
