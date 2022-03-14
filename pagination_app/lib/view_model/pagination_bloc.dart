@@ -44,8 +44,11 @@ class PaginationBloc extends Bloc<PaginationEvent, PaginationState> {
         return emit(
           state.copyWith(
               hasReachedMax: false,
+              //gelen _products ı olduğu gibi içeriye atıyoruz.
               products: _products,
               status: PaginationStatus.success,
+              // _products içerisindeki son verinin tarihini de içeriye atıyoruz. 
+              //Daha sonra bu son veriye göre greater parametresi değişiyor.
               lastProductIndex: _products.last.date,
               isFiltered: true),
         );
@@ -68,6 +71,7 @@ class PaginationBloc extends Bloc<PaginationEvent, PaginationState> {
         state.copyWith(
             status: PaginationStatus.success,
             hasReachedMax: false,
+            //gelen verileri elimizde olan listeye ekliyoruz.
             products: List.of(state.products)..addAll(_products),
             lastProductIndex: _products.last.date,
             isFiltered: true),
